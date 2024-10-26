@@ -57,37 +57,22 @@ $$
 
 
 ### Model 2: Content Based Recommender
-\begin{equation}\large
-   \cos\theta = \frac{\overrightarrow{a}.\overrightarrow{b}}{\lVert{\overrightarrow{a}}\rVert {\lVert{\overrightarrow{b}}\rVert}}
-\end{equation}
-
-\begin{equation}
-   \lVert{\overrightarrow{a}}\rVert = \sqrt{a_{1}^2 + a_{2}^2 +a_{3}^2 + ... + a_{n}^2}
-\end{equation}
-   
-\begin{equation}
-   \lVert{\overrightarrow{b}}\rVert = \sqrt{b_{1}^2 + b_{2}^2 +b_{3}^2 + ... + b_{n}^2}
-\end{equation}
-
-
-Công thức tính cosin của góc θ giữa hai vectơ \(\overrightarrow{a}\) và \(\overrightarrow{b}\) được xác định như sau:
-
 $$
 \cos \theta = \frac{\overrightarrow{a} \cdot \overrightarrow{b}}{\lVert \overrightarrow{a} \rVert \lVert \overrightarrow{b} \rVert}
 $$
 
 Trong đó:
 
-- \(\overrightarrow{a} \cdot \overrightarrow{b}\) là tích vô hướng của hai vectơ.
-- \(\lVert \overrightarrow{a} \rVert\) và \(\lVert \overrightarrow{b} \rVert\) là độ dài của các vectơ.
+- $$\(\overrightarrow{a} \cdot \overrightarrow{b}\)$$ là tích vô hướng của hai vectơ.
+- $$\(\lVert \overrightarrow{a} \rVert\) và \(\lVert \overrightarrow{b} \rVert\)$$ là độ dài của các vectơ.
 
-Độ dài của vectơ \(\overrightarrow{a}\) được tính bằng công thức:
+Độ dài của vectơ $$\(\overrightarrow{a}\)$$ được tính bằng công thức:
 
 $$
 \lVert \overrightarrow{a} \rVert = \sqrt{a_{1}^2 + a_{2}^2 + a_{3}^2 + \ldots + a_{n}^2}
 $$
 
-Tương tự, độ dài của vectơ \(\overrightarrow{b}\) được tính như sau:
+Tương tự, độ dài của vectơ $$\(\overrightarrow{b}\)$$ được tính như sau:
 
 $$
 \lVert \overrightarrow{b} \rVert = \sqrt{b_{1}^2 + b_{2}^2 + b_{3}^2 + \ldots + b_{n}^2}
