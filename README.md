@@ -36,3 +36,58 @@ Mùa trong năm: Nếu có sự tăng đột ngột trong lượng xem phim ở 
 Ngày trong tuần: Bạn cũng có thể xem xét thói quen xem phim trong các ngày cụ thể của tuần. Có thể có sự gia tăng vào cuối tuần khi mọi người có nhiều thời gian rảnh hơn so với các ngày trong tuần.
 
 ## Visualize
+![1](https://github.com/user-attachments/assets/0e4a9916-db00-482c-8a1d-6aa6e59994ec)
+![2](https://github.com/user-attachments/assets/7101326c-831d-4004-a164-314af2d4e7d0)
+![3](https://github.com/user-attachments/assets/68ec6f68-f4ca-4ed7-939b-5880cbd63ac2)
+
+## Building models
+
+### Model 1: Simple Recommender
+\begin{equation}\large
+Weighted\;Rating =(\frac{v}{v+m}.R )+(\frac{m}{v+m}.C)
+\end{equation}
+
+
+* v is the number of votes for the movie
+
+* m is the minimum votes required to be listed in the chart
+
+* R is the average rating of the movie
+
+* C is the mean vote across the whole dataset
+
+
+### Model 2: Content Based Recommender
+\begin{equation}\large
+   \cos\theta = \frac{\overrightarrow{a}.\overrightarrow{b}}{\lVert{\overrightarrow{a}}\rVert {\lVert{\overrightarrow{b}}\rVert}}
+\end{equation}
+
+\begin{equation}
+   \lVert{\overrightarrow{a}}\rVert = \sqrt{a_{1}^2 + a_{2}^2 +a_{3}^2 + ... + a_{n}^2}
+\end{equation}
+   
+\begin{equation}
+   \lVert{\overrightarrow{b}}\rVert = \sqrt{b_{1}^2 + b_{2}^2 +b_{3}^2 + ... + b_{n}^2}
+\end{equation}
+
+### Model Collaborative model and Hybrid model using LightFM
+**Prepare movie features**
+1. Apply the same encoder that we used to split train/test data
+
+2. Columns refer to the column names of the item features (product_id excluded)
+
+3. To prepare the item_features, need to use the Dataset class in LightFM API.
+
+4. First fit the dataset instance and then call function build_item_features to generate the item features for modeling.
+
+**Building the ID mapping**
+1. Columns refer to the column names of the item features used to fit model (movies_id excluded)
+
+2. To prepare the item_features, need to use the Dataset class in LightFM API.
+
+3. First fit the dataset instance and then call function build_item_features to generate the item features for modeling.
+
+**Building the Interaction matrix**
+The build_interactions method returns 2 COO sparse matrices, namely the interactions and weights matrices.
+
+
