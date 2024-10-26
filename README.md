@@ -47,6 +47,9 @@ Ngày trong tuần: Bạn cũng có thể xem xét thói quen xem phim trong cá
 Weighted\;Rating =(\frac{v}{v+m}.R )+(\frac{m}{v+m}.C)
 \end{equation}
 
+$$
+\text{Weighted Rating} = \left(\frac{v}{v+m}\right) R + \left(\frac{m}{v+m}\right) C
+$$
 
 * v is the number of votes for the movie
 
